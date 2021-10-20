@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Inicio</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+        <link href="/CSS/estiloForm.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+        <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    </head>
+
+    <body style="background-image: url('https://images8.alphacoders.com/809/thumb-1920-809459.jpg') ;
+          background-position:center top; background-size: cover;background-attachment: fixed;background-repeat: no-repeat;">
+        <h1 class="display-6" style="text-align: center; color:rgba(255,255,255,0.8);">Alta de Afiliados</h1>
+        <form>
+            <div class="conteiner" id="uno" style="width: 45%; margin: 2%; text-align: center; float: left">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Cuil 
+                        </span>
+
+                    </div>
+
+                    <input type="number" class="form-control" placeholder="cuil" aria-label="cuil" name="cuil"
+                           aria-describedby="basic-addon1" style="background: rgba(255,255,255,0.6);text-align: center;" />
+
+
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Apelldio</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Apelldio" aria-label="Username"
+                           aria-describedby="basic-addon1" name="apellido" id="hola" required="true" />
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Nombre</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Nombre" aria-label="nombre" aria-describedby="basic-addon1"
+                           name="nombre" id="hola" required="true" />
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Fecha de nacimiento</span>
+                    </div>
+                    <input type="date" class="form-control" aria-label="Fecha de nacimiento" aria-describedby="basic-addon1"
+                           name="fechaNacimiento" id="hola" required="true" />
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Tipo de Documentos</label>
+                    </div>
+                    <select class="custom-select"  name="tipoDocumento" id="combo">
+                        <option selected="0">DNI</option>
+                        <option value="1">DU</option>
+                        <option value="2">LC</option>
+                        <option value="3">LE</option> 
+                    </select>
+
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Número de Documento</span>
+                    </div>
+                    <input type="number" class="form-control" placeholder="Nro de Documento" aria-label="NroDocumento"
+                           aria-describedby="basic-addon1" name="nroDocumento" id="hola" required="true" />
+
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Género</label>
+                    </div>
+                    <select class="custom-select" name="genero" id="combo" required="true">
+                        <option selected ="F">Femenino</option>
+                        <option value="M">Masculino</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Estado civil</label>
+                    </div>
+                    <select class="custom-select" name="estadoCivil" id="combo" required="true">
+                        <option selected ="1">Casada/o</option>
+                        <option value="2">Soltera/o</option>
+                        <option value="3">Divorciada/o</option>
+                        <option value="4">viuda/o</option>
+                        <option value="5">Conyugue</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Provincia</label>
+                    </div>
+                    <select class="custom-select"  name="Provincia" id="combo" required="true"">
+                        <option value="o">Provincia</option>
+                      
+                    </select>
+                </div>
+              <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Localidad</label>
+                    </div>
+                    <select class="custom-select"  name="localidad" id="combo" required="true">
+                        <option value="o">Localidad</option>
+                    </select>
+
+                </div> 
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Dirección</span>
+                    </div>
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Calle</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Calle" aria-label="calle" aria-describedby="basic-addon1"
+                           name="calle" id="hola" required="true" />
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Nro</span>
+                    </div>
+                    <input type="number" class="form-control" placeholder="Número" aria-label="Nro" aria-describedby="basic-addon1"
+                           name="numeroCalle" id="hola" required="true" />
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Departamento</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Departamento" aria-label="departamento"
+                           aria-describedby="basic-addon1" name="departamento" id="hola" />
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">CP</span>
+                    </div>
+                    <input type="number" class="form-control" placeholder="CodPostal" aria-label="departamento"
+                           aria-describedby="basic-addon1" name="codigoPostal" id="hola" required="true" />
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Email</span>
+                    </div>
+                    <input type="email" class="form-control" placeholder="Email" aria-label="nombre" aria-describedby="basic-addon1"
+                           name="email" id="hola" />
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Lugar de Trabajo</span>
+                    </div>
+                    <input type="number" class="form-control" placeholder="código" aria-label="Small"
+                           aria-describedby="basic-addon1" name="codigoEstablecimiento" id="hola" />
+
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Establecimiento</label>
+                    </div>
+                    <select class="custom-select"  name="Establecimiento" id="combo" required="true" ">
+                        <option value="o" >Establecimiento</option>
+                     
+
+                    </select>
+
+
+                </div>
+            </div>
+
+        </form>
+
+        <form>
+            <div class="conteiner" id="dos" style="width: 45%; margin: 2%; text-align: center; float: right">
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Caja de Ahorro</span>
+                    </div>
+                    <input type="number" class="form-control" placeholder="Número de caja de Ahorro" aria-label="Username"
+                           aria-describedby="basic-addon1" name="cajaAhorro" id="hola" required="true" />
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Número de Legajo</span>
+                    </div>
+                    <input type="number" class="form-control" placeholder="Legajo" aria-label="nombre"
+                           aria-describedby="basic-addon1" name="legajo" id="hola" required="true" />
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Ayuda Mutua</span>
+                    </div>
+                    <input type="number" class="form-control" placeholder="Ayuda Mutua" aria-label="nombre"
+                           aria-describedby="basic-addon1" name="ayudaMutua" id="hola" />
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Fecha de Afiliación</span>
+                    </div>
+                    <input type="date" class="form-control" aria-label="fechaAfiliacion" aria-describedby="basic-addon1"
+                           name="fechaAfiliacion" id="hola" required="true"/>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Fecha de afiliación a O.S.P.I.L.</span>
+                    </div>
+                    <input type="date" class="form-control" aria-label="fechaAfiliacionOspil" aria-describedby="basic-addon1"
+                           name="fechaAfiliacionOspil" id="hola" />
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Fecha de afiliación a A.M.P.I.L.</span>
+                    </div>
+                    <input type="date" class="form-control" aria-label="fechaAfiliacionAmpil" aria-describedby="basic-addon1"
+                           name="fechaAfiliacionAmpil" id="hola" />
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Número de A.M.P.I.L.</span>
+                    </div>
+                    <input type="number" class="form-control" placeholder="Número de A.M.P.I.L." aria-label="nroAmpil"
+                           aria-describedby="basic-addon1" name="nroAmpil" id="hola" />
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Número de Seccional</span>
+                    </div>
+                    <input type="number" class="form-control" placeholder="Número de Seccional" aria-label="nroSeccional"
+                           aria-describedby="basic-addon1" name="nroSeccional" id="hola" required="true" />
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Número Nacional</span>
+                    </div>
+                    <input type="number" class="form-control" placeholder="Número de Nacional" aria-label="nroNacional"
+                           aria-describedby="basic-addon1" name="nroNacional" id="hola" required="true" />
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Plan superador</span>
+                    </div>
+                    <select class="custom-select"  name="planSuperador" id="combo" required="true">
+                        <option selected="0">Plan</option>
+                        <option value="PS1">PS1</option>
+                        <option value="PS2">PS2</option>
+                        <option value="PS3">PS3</option>
+                        <option value="PS4">PS4</option>
+                        <option value="PC">PC</option>
+                        <option value="PC1">PC1</option>
+                        <option value="PMI">PMI</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Pertenece al Sector</span>
+                    </div>
+                    <select class="custom-select"  name="perteneceSector" id="combo" required="true">
+                        <option selected="0">Opcion</option>
+                        <option value="SI">Si</option>
+                        <option value="NO">No</option>
+
+                    </select>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-success" style="width: 100%;">Agregar Afilaidos
+                        <span class="material-icons">
+                            check_circle
+                        </span>
+                    </button>
+                </div>
+
+
+            </div>
+        </form>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    </body>
+
+
+
+</html>
